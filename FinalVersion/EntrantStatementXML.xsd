@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EntrantStatementXML"
+    targetNamespace="http://tempuri.org/EntrantStatementXML.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/EntrantStatementXML.xsd"
+    xmlns:mstns="http://tempuri.org/EntrantStatementXML.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name = "BratckovaPV31Comission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Entrant" minOccurs ="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Statement" minOccurs ="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name ="Count" type ="xs:int" use ="required"/>
+                  <xs:attribute name="Consent" type ="xs:string" use="required"/>                    
+                  <xs:attribute name="OriginalDocument" type ="xs:string" use="required"/>                   
+                  <xs:attribute name="TitleSpeciality" use ="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="0"/>
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name ="TitleFormTraning" use ="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="0"/>
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name ="TitleBasisTraning" use ="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="0"/>
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>                  
+                </xs:complexType> 
+              </xs:element>
+              <xs:element name="Point" minOccurs ="0" maxOccurs ="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="PointBall" type="xs:int" use ="required"/>
+                  <xs:attribute name="Discipline" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name ="EntrantAchiv" minOccurs ="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name ="Count" type ="xs:int" use ="required"/>
+                  <xs:attribute name="Title" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Contact" type ="xs:string" use="required"/>
+            <xs:attribute name="Surname" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="0"/>
+                  <xs:maxLength value="30"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="IName" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="0"/>
+                  <xs:maxLength value="30"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="Patronymic" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="0"/>
+                  <xs:maxLength value="30"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="Passport" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="10"/>
+                  <xs:maxLength value="15"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="Adress" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="0"/>
+                  <xs:maxLength value="50"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="BirthDate" type ="xs:string" use="required"/>
+            <xs:attribute name="PreviousEducation">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="0"/>
+                  <xs:maxLength value="70"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="Hostel" type ="xs:string"  use="required"/>
+            <xs:attribute name="CurrDate" type ="xs:string" use="required"/>
+            <xs:attribute name="AllCount" type="xs:integer" use="required"/>
+            <xs:attribute name="NowCount" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
